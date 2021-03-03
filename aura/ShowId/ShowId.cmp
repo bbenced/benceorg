@@ -1,0 +1,38 @@
+<aura:component implements="force:hasRecordId,force:lightningQuickActionWithoutHeader"
+	access="global"
+	controller="GetOpportunityId_Controller">
+	
+	<!-- attributes -->
+   <!-- <aura:attribute name="opportunityList" type="List"/> -->
+    <aura:attribute name="data" type="sObject"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="draftValues" type="Object" />
+    <!-- handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+	<!-- Header -->
+    <div class="slds-modal__header">
+        <h2 class="slds-text-heading--medium"> Let's see the Opportunities and Quotes related to the Account </h2>
+    </div>
+
+	 <!-- Body -->  	
+    <!--the container element determine the height of the datatable -->
+    <div style="height: 200px">
+        <lightning:datatable
+                keyField="Id"
+                data="{! v.data }"
+                columns="{! v.columns }"
+            	draftValues="{! v.draftValues }"              
+                oncellchange="{! c.handlecellchange}"
+                suppressBottomBar = "true"
+				hideCheckboxColumn="true"
+                />
+    </div>
+    <!---->
+   
+ <!-- Footer -->
+    <div class="slds-modal__footer">
+        	<lightning:button variant="brand" label="Save" title="Brand action" onclick="{! c.handleSaveEdition }" />
+            <lightning:button variant="destructive" label="Close" title="Destructive action" onclick="{! c.handleClickButton }"/>
+    		
+    </div>
+</aura:component>

@@ -1,0 +1,85 @@
+<apex:page applyBodyTag="false" standardStylesheets="false" renderAs="pdf" standardController="Account">
+
+    <head>
+        <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+</style>
+
+
+<title>Page Title</title>
+</head>
+<body>
+
+  <h1>  {! Account.Name}</h1>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+     <table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td> {! Account.Name}</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table> 
+    <table style="width:100%">
+  <tr>
+    <th>Name:</th>
+    <td>Bill Gates</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Telephone:</th>
+    <td>55577854</td>
+  </tr>
+  <tr>
+    <td>55577855</td>
+  </tr>
+</table>
+
+     <ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul> 
+<h1 style="background-color:Tomato;">Tomato</h1>
+<h1 style="background-color:Orange;">Orange</h1>
+<h1 style="background-color:DodgerBlue;">DodgerBlue</h1>
+<h1 style="background-color:MediumSeaGreen;">MediumSeaGreen</h1>
+<h1 style="background-color:Gray;">Gray</h1>
+<h1 style="background-color:SlateBlue;">SlateBlue</h1>
+<h1 style="background-color:Violet;">Violet</h1>
+<h1 style="background-color:LightGray;">LightGray</h1>
+    <p><b>This text is bold</b></p>
+<p><i>This text is italic</i></p>
+<p>This is<sub> subscript</sub> and <sup>superscript</sup></p>
+
+
+    <p>I will display A B C</p>
+<p>I will display &#65; &#66; &#67;</p>
+
+    <dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl>
+</body>
+
+</apex:page>
